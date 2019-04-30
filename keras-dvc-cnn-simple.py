@@ -166,7 +166,7 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
-model.add(Dense(64, activation='exponential'))
+model.add(Dense(64, activation='softplus'))
 model.add(Dropout(0.5))
 model.add(Dense(1, activation='sigmoid'))
 
