@@ -166,6 +166,7 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
+model.add(Dense(64, activation='swish'))
 model.add(Dropout(0.5))
 model.add(Dense(1, activation='sigmoid'))
 
@@ -178,7 +179,7 @@ print(model.summary())
 # ### Learning
 
 epochs = 20
-workers = 8
+workers = 4
 use_multiprocessing = False
 
 print('Training for', epochs, 'epochs with', workers,
