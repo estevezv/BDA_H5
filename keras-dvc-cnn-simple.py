@@ -166,8 +166,9 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
+model.add(Dense(64, activation='tanh'))
 model.add(Dropout(0.5))
-model.add(Dense(1, activation='hard_sigmoid'))
+model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy',
               optimizer='rmsprop',
