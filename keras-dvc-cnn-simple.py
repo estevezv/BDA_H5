@@ -178,7 +178,7 @@ print(model.summary())
 # ### Learning
 
 epochs = 20
-workers = 4
+workers = 8
 use_multiprocessing = False
 
 print('Training for', epochs, 'epochs with', workers,
